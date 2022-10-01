@@ -3,15 +3,15 @@ package vehiculos;
 public class Vehiculo {
     protected String placa;
     protected int puertas;
-    protected double velocidadMaxima;
+    protected int velocidadMaxima;
     protected String nombre;
     protected double precio;
     protected double peso;
     protected String traccion;
     protected Fabricante fabricante;
-    private static int CantidadVehiculos;
+    public static int CantidadVehiculos;
 
-    public Vehiculo(String placa, int puertas, double velocidadMaxima, String nombre, double precio, double peso, String traccion, Fabricante fabricante){
+    public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, double precio, double peso, String traccion, Fabricante fabricante){
         CantidadVehiculos++;
         Pais.agregarVenta(fabricante.getPais().getNombre());
         Fabricante.agregarFabricante(fabricante.getNombre());
@@ -54,11 +54,11 @@ public class Vehiculo {
         this.precio = precio;
     }
 
-    public double getVelocidadMaxima() {
+    public int getVelocidadMaxima() {
         return velocidadMaxima;
     }
 
-    public void setVelocidadMaxima(double velocidadMaxima) {
+    public void setVelocidadMaxima(int velocidadMaxima) {
         this.velocidadMaxima = velocidadMaxima;
     }
 
