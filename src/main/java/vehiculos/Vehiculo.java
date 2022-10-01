@@ -12,6 +12,13 @@ public class Vehiculo {
     public static int CantidadVehiculos;
 
     public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, double precio, double peso, String traccion, Fabricante fabricante){
+        this.placa = placa;
+        this.puertas = puertas;
+        this.velocidadMaxima = velocidadMaxima;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.peso = peso;
+        this.traccion = traccion;
         CantidadVehiculos++;
         Pais.agregarVenta(fabricante.getPais().getNombre());
         Fabricante.agregarFabricante(fabricante.getNombre());
